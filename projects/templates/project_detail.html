@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block page_content %}
-<h1>{{ project.title }}</h1>
+{% block content %}
+<h3>{{ project.title }}</h3>
 <div class="row">
     <div class="col-md-8">
         <img src="{% static project.image %}" alt="" width="100%">

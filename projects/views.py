@@ -2,6 +2,10 @@ from django.shortcuts import render
 from projects.models import Project
 
 
+def home(request):
+    return render(request, 'about.html')
+
+
 def project_index(request):
     projects = Project.objects.all()
     context = {

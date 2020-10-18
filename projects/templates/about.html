@@ -20,11 +20,22 @@ p{
   padding-left: 10%;
   padding-right: 10%;
 }
-.center {
-  padding-top: 10%;
-  text-align: center;
+* {
+    margin: 0;
 }
-
+html, body {
+    height: 100%;
+}
+.wrapper {
+    padding-top: 10%;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -142px;
+}
+.footer, .push {
+    height: 142px;
+}
 </style>
 
   <head>
@@ -33,15 +44,16 @@ p{
   </head>
 
   <body>
-  <div class="center">
+  <div class="wrapper">
     <h3>About me</h3>
       <p>Working as a Python Automation Developer in TCS and passionate about cutting-edge
         technology and solving real world problems, with previous experience in Quality Assurance -
         automation and manual testing. I am actively seeking to leverage my machine learning expertise
         in different areas.Skilled in Agile Methodologies, Test Automation using python , SQL , and Software Testing.</p>
-  </div>
   <div>
     <p>Click on <strong>MY PROJECTS</strong> to get all my Project Details</p>
+  </div>
+    <div class="push"></div>
   </div>
   </body>
 

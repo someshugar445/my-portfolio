@@ -1,1 +1,1 @@
-web: gunicorn personal_portfolio.wsgi
+web: python personal_portfolio/manage.py collectstatic --noinput; bin/gunicorn_django --workers=4 --bind=0.0.0.0:$PORT personal_portfolio/settings.py

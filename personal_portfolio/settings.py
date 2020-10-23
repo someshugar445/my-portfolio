@@ -119,6 +119,7 @@ STATIC_URL = '/static/'
 
 # Extra places for collectstatic to find static files.
 STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'personal_portfolio','static'),
     os.path.join(BASE_DIR, 'projects','static'),
 )
 

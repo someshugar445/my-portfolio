@@ -115,19 +115,20 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_URL = '/static/'
-
-TEMPLATE_DIRS = (
-    os.path.join(BASE_DIR,  'templates'),
-    # Add to this list all the locations containing your static files 
-)
-
-# Extra places for collectstatic to find static files.
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'personal_portfolio','static'),
-    os.path.join(BASE_DIR, 'projects','static'),
+    os.path.join(BASE_DIR, 'static'),
 )
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+# for /static/root/favicon.ico    
+WHITENOISE_ROOT = os.path.join(BASE_DIR, 'staticfiles', 'root') 
+# Extra places for collectstatic to find static files.
+# STATICFILES_DIRS = (
+#     os.path.join(BASE_DIR, 'personal_portfolio','static'),
+#     os.path.join(BASE_DIR, 'projects','static'),
+# )
 
 #  Add configuration for static files storage using whitenoise
 #STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'

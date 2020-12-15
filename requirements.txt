@@ -10,4 +10,4 @@ pytz==2020.1
 six==1.15.0
 sqlparse==0.4.1
 virtualenv==20.0.34
-whitenoise==5.2.0
+whitenoise==2.0.6
